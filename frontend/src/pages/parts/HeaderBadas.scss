@@ -1,0 +1,113 @@
+header{background-color: #262626;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+        // width: 100%;
+        height: 70px;
+    .conteiner{
+        width: 1110px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    // padding: 0 80px;
+        .logolink{
+            text-decoration: none;
+        }
+        .logo{
+            color:white;
+            font-size: xx-large;
+            display: flex;
+            align-items: center;
+            .smile{
+                border: solid #FAB23D 3px;
+                background-color: black;
+                box-shadow: #FAB23D 0 0 20PX -5PX inset;
+                width: 60px;
+                height: 60px;
+                position: relative;
+                border-radius: 25px;
+                svg{
+                    // margin-bottom: 18px;
+                    // padding-bottom: 10px;
+                    display: flex;
+                    width: 60px;
+                    height: 60px;
+                    align-items: center;
+                    position: absolute;
+                    top: -13px;
+                    left: 0.5px;
+                    // background-color: #000;
+                }
+            }
+            
+            span{
+                color: #FAB23D;
+                text-transform:lowercase;
+            }
+        }
+        color: #FAB23D;
+        text-transform: uppercase;
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        ul{
+            display: flex;
+            gap: 20px;
+            li{
+                list-style: none;
+                a{
+                    text-decoration: none;
+                    position: relative;
+                    color: #FAB23D;
+                    transition: 1s;
+                    &:hover{
+                        text-shadow: #ffc812 0px 2px 3px;
+                        // animation: ;
+                    }
+                    &::after{
+                        content: "";
+                        transition: 0.5s;
+                        width: 10%;
+                        height: 0px;
+                        bottom: -3px;
+                        left: -1px;
+                        position: absolute;
+                        border: #fab13d00 solid 2px;                        
+                    }
+                    &:hover::after{
+                        border: #FAB23D solid 2px;
+                        width: 97%;
+                    }
+                }
+            }
+        }
+        .phone{
+            a{
+                color: #FAB23D;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                svg{
+                    margin-top: 2px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+@media(max-width: 1100px){
+    .conteiner {
+        ul{
+            li{
+                display: none;
+            }
+        }
+    }
+}

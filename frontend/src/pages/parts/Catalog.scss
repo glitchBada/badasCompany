@@ -1,0 +1,106 @@
+*{
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+
+.catalog{
+    // margin-top: 200px;
+    // position: relative;
+    background-color: black;
+    color: white;
+    width: 1080px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 40px;
+    ul{
+        display: flex;
+        margin: 10px 0 0 0;
+        gap: 20px;
+        flex-wrap: wrap;
+        li.oneService{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 15px;
+            text-transform: uppercase;
+            width: 510px;
+            padding: 10px;
+            list-style: none;
+            background-color: #FFC812;
+            color: black;
+            border-radius: 25px;
+            .description{
+                border-radius: 17px;
+                width: 490px;
+                height: 100%;
+                background-color: #383838;
+                color: #FFC812;
+                padding: 10px;
+                // margin-top: 10px;
+                h3{
+                    display: flex;
+                    justify-content: center;
+                }
+                .descriptionIn{
+                    margin-bottom: 10px;
+                    margin-top: 10px;
+                    span{
+
+                    }
+                }
+                .price{
+                    
+                    span{
+
+                    }
+                }
+                .category{
+                    
+                    span{
+
+                    }
+                }
+            }
+            button{
+                // position: relative;
+                border: none;
+                font-size: larger;
+                text-transform: uppercase;
+                color: #FFC812;
+                background-color: black;
+                padding: 15px;
+                width: 220px;
+                border-radius: 20px;
+                cursor: pointer;
+                // z-index: 1;
+                // &::before{
+                //     content: "";
+                //     position: absolute;
+                //     border-radius: 20px;
+                //     left: 0;
+                //     top: 0;
+                //     background: url(./pngtree-noise-abstract-texture-dark-gray-noise-background-image_879896.jpg) repeat center;
+                //     backdrop-filter: blur(19px);
+                //     mix-blend-mode: screen;
+                //     width: 100%;
+                //     height: 100%;
+                //     z-index: -1;
+                // }
+                
+            }
+            
+        }
+    }
+}
+
+
+
+@media (max-width: 1120px) {
+    .catalog{
+        width: 530px;
+    }
+    
+}

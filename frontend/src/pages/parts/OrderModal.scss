@@ -1,0 +1,208 @@
+@keyframes backgraundGradient{
+    0%{
+        -webkit-box-shadow: #ff6464 0 0px 28px, #ff0 -13px -14px 10px -10px, #ff8000 0 -10px 20px, red 0 -18px 40px, 50px -13px 12px -15px rgba(0, 0, 0, 0);
+        box-shadow: #ff6464 0 0px 28px, #ff0 -13px -14px 10px -10px, #ff8000 0 -10px 20px, red 0 -18px 40px, 50px -13px 12px -15px rgba(0, 0, 0, 0);
+    }
+    50%{
+        -webkit-box-shadow: #ff6464 0 10px 15px, rgb(255, 225, 103) -5px -5px 10px -10px,#ffcc11 0 0px 10px, rgb(255, 66, 66) 0 0px 30px, 50px -13px 12px -15px rgba(0, 0, 0, 0);
+        box-shadow: #ff6464 0 10px 15px, rgb(255, 225, 103) -5px -5px 10px -10px, #ffcc11 0 0px 10px, rgb(255, 66, 66) 0 0px 30px, 50px -13px 12px -15px rgba(0, 0, 0, 0);
+    }
+    100%{
+        -webkit-box-shadow: #ff6464 0 0px 28px, #ff0 -13px -14px 10px -10px, #ff8000 0 -10px 20px, red 0 -18px 40px, 50px -13px 12px -15px rgba(0, 0, 0, 0);
+        box-shadow: #ff6464 0 0px 28px, #ff0 -13px -14px 10px -10px, #ff8000 0 -10px 20px, red 0 -18px 40px, 50px -13px 12px -15px rgba(0, 0, 0, 0);
+    }
+}
+.headModal{
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    padding: auto;
+    backdrop-filter: blur(20px);
+    left: 0;
+    top: 0;
+    .modal{
+        margin: 100px auto 0 auto;
+        animation: backgraundGradient 2s infinite;
+        backdrop-filter: blur(50px);
+        width: 700px;
+        padding: 5px;
+        background: rgb(255,194,0);
+        background: linear-gradient(140deg, rgba(255,194,0,1) 0%, rgba(205,35,0,1) 100%);
+        border-radius: 20px;
+        .modal-content{
+            border-radius: 20px;
+            padding: 10px;
+            background-color: black;
+            form{
+                gap:10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .usersContacts{
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    .flag-dropdown{
+                        position: absolute;
+                        left: -40px;
+                        height: 50px;
+                        border: none;
+                        border-radius: 20px;
+                        // top:15px;
+                        background-color: #262626;
+                        &.open{
+                            .selected-flag{
+
+                                border-radius: 20px;
+                                background-color: #262626;
+                                &:hover{
+                                background-color:#3e3e3e;
+                                }
+                            }
+                        }
+                        .selected-flag{
+                            &:hover{
+                            background-color: #3e3e3e;
+                            border: none;
+                            border-radius: 20px;
+                            }
+                            &:focus{
+                            background-color: #3e3e3e;
+                            border: none;
+                            border-radius: 20px;
+                            }    
+                            &:focus-visible{
+                            background-color: #3e3e3e;
+                            border: none;
+                            border-radius: 20px;
+                            }
+                            &:focus-within{
+                            background-color: #3e3e3e;
+                            border: none;
+                            border-radius: 20px;
+                            }                  
+                        }
+                    }
+                    .form-control{
+                        width: 170px;
+                        padding: 25px 5px;
+                    }
+                    .phoneinp{
+                        display: flex;
+                        justify-content: end;
+                        width: 180px;
+                        // padding: 5px;
+                        height: 40px;
+                        border-radius: 20px;
+                        border: none;
+                    //     padding: 5px;
+                    //     background-color: #262626;
+                    //     color: #FFC812;
+                    //     transition: 0.5s;
+                    //     &:hover{
+                    //         background-color: #3e3e3e;
+                    //     }
+                    //     &::placeholder{
+                    //         color: #FFC812;
+                    //         text-transform: uppercase;
+                    //         font-size: larger;
+                    //     }
+                    //     &::-ms-textarea-placeholder { /* Edge 12-18 */
+                    //         color: #FFC812;
+                    //         text-transform: uppercase;
+                    //         font-size: larger;
+                    //     }
+                    }
+                    input{
+                        width: 180px;
+                        height: 40px;
+                        border-radius: 20px;
+                        border: none;
+                        padding: 5px;
+                        background-color: #262626;
+                        color: #FFC812;
+                        transition: 0.5s;
+                        &:hover{
+                            background-color: #3e3e3e;
+                        }
+                        &::placeholder{
+                            color: #FFC812;
+                            text-transform: uppercase;
+                            font-size: larger;
+                        }
+                        &::-ms-textarea-placeholder { /* Edge 12-18 */
+                            color: #FFC812;
+                            text-transform: uppercase;
+                            font-size: larger;
+                        }
+                        
+                    }            
+                }
+                .technicalTask{
+                    textarea{
+                        width: 635px;
+                        max-width: 635px;
+                        min-width: 300px;
+                        min-height: 200px;
+                        max-height: 300px;
+                        color: #FFC812;
+                        background-color: #262626;
+                        border-radius: 20px;
+                        border: none;
+                        padding: 20px;
+                        transition: 0.2s;
+                        &:hover{
+                            background-color: #3e3e3e;
+                        }
+                        &::placeholder {
+                            color: #FFC812;text-transform: uppercase;
+                            font-size: larger;
+                        }
+                        &::-ms-textarea-placeholder { /* Edge 12-18 */
+                            color: #FFC812;
+                            text-transform: uppercase;
+                            font-size: larger;
+
+                          }
+                    }
+                }
+                button{
+                    padding: 20px;
+                    border: none;
+                    border-radius: 20px;
+                    background-color: #FFC812;
+                    color: #262626;
+                    text-transform: uppercase;
+                    font-weight: 900;
+                    font-size:medium;
+                    transition: 0.5s;
+                    &:hover{
+                        scale: 1.04;
+                        background-color: #ffda44;
+                    }
+                }
+
+            }
+            .closeButton{
+                path{font-weight: 800;}
+                display: flex;
+                align-items: center;
+                color: #FFC812;
+                padding: 5px 15px 5px 0;
+                background-color: #262626;
+                border-radius: 20px;
+                border: none;
+                font-size: larger;
+                transition: 0.5s;
+                &:hover{
+                    background-color: #3e3e3e;
+                    scale: 1.04;
+
+                }
+
+            }
+        }
+    }
+}
