@@ -99,7 +99,7 @@ const Register = () => {
 //         }
 //     };
 
-import axios from "axios";
+    import axios from "axios";
  
 function saveDataToLocalStorage(data) {
     localStorage.setItem('userEmail', data.email);
