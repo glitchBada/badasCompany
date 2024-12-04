@@ -24,7 +24,7 @@ export function loadDataFromLocalStorage() {
 }
  
  
-export const apiUrl = 'https://api.lib-intuit.online'
+export const apiUrl = 'https://127.0.0.1'
  
 export const baseApi = `${apiUrl}/api/`
  
@@ -36,9 +36,7 @@ export function registerPost(email, password, name, phone, setModalMessage, setM
     data.append('password', password)
     data.append('full_name', name)
     data.append('phone_number', phone)
-    data.append('user_type', role)
-    data.append('group', group)
- 
+
     axios.post(registerPoint, data)
         .then((response) => {
             setModalMessage(
@@ -100,7 +98,8 @@ export function registerPost(email, password, name, phone, setModalMessage, setM
  
  
 export const loginPoint = `${baseApi}/accounts/login/`
-export default function loginPost(email, password, modalOpen, setModalMessage, navigate) {
+
+export function loginPost(email, password, modalOpen, setModalMessage, navigate) {
     const data = new FormData();
  
     data.append('email', email)
@@ -245,24 +244,6 @@ export function userProfile(token) {
         })
 }
  
- 
-export const getTendersPoint = `${baseApi}/tenders/`
- 
-export function getTenders() {
-    return axios.get(getTendersPoint)
-        .then((response) => {
-            return response.data
-        })
-        .catch((error) => {
-            console.log(error)
-            throw error
-        })
- 
-}
- 
- 
-export const sendProductPost = `${baseApi}/products/create_product/`
-export const sendTenderPost = `${baseApi}/tenders/create_tender/`
 
 
 
@@ -309,6 +290,6 @@ const Register = () => {
             </form>
         </div>
     );
-};
+}
 
 export default Register;
